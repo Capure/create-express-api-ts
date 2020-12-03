@@ -6,18 +6,18 @@ const name = process.argv[2];
 if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
   return console.log(`
   Invalid directory name.
-  Usage: create-express-api name-of-api  
+  Usage: create-express-api-ts name-of-api  
 `);
 }
 
-const repoURL = 'https://github.com/w3cj/express-api-starter.git';
+const repoURL = 'https://github.com/Capure/express-api-starter-ts';
 
 runCommand('git', ['clone', repoURL, name])
   .then(() => {
     return runCommand('rm', ['-rf', `${name}/.git`]);
   }).then(() => {
     console.log('Installing dependencies...');
-    return runCommand('npm', ['install'], {
+    return runCommand('yarn', ['install'], {
       cwd: process.cwd() + '/' + name
     });
   }).then(() => {
@@ -25,7 +25,7 @@ runCommand('git', ['clone', repoURL, name])
     console.log('');
     console.log('To get started:');
     console.log('cd', name);
-    console.log('npm run dev');
+    console.log('yarn dev');
   });
 
 function runCommand(command, args, options = undefined) {

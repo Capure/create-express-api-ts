@@ -1,19 +1,16 @@
 {
-  "name": "create-express-api",
-  "version": "1.1.0",
+  "name": "create-express-api-ts",
+  "version": "1.0.0",
   "bin": {
-    "create-express-api": "index.js"
+    "create-express-api-ts": "index.js"
   },
-  "description": "A CLI to automatically clone the Express API Starter",
+  "description": "A CLI to automatically clone the Express API Starter TS",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/create-express-api.git"
+    "url": "https://github.com/Capure/create-express-api-ts.git"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "author": "Capure",
   "license": "MIT"
 }
